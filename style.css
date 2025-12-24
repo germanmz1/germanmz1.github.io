@@ -21,9 +21,10 @@ margin-top: 60px;
 }
 
 article {
-margin-top: 30px;
-padding: 20px;
-border: 1px solid #ddd;
+    margin-top: 40px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
 }
 
 ul {
@@ -47,4 +48,25 @@ body.lang-en-active .lang-es {
 
 body.lang-en-active .lang-en {
     display: block;
+}
+section {
+    margin-bottom: 80px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    color: #444;
+}
+
+#language-switch {
+    margin-top: 10px;
+}
+
+#language-switch button {
+    margin-right: 5px;
+    padding: 4px 8px;
+    font-size: 0.9rem;
 }
