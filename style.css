@@ -38,3 +38,13 @@ text-decoration: none;
 a:hover {
 text-decoration: underline;
 }
+.lang-en {
+    display: none;
+}
+body.lang-en-active .lang-es {
+    display: none;
+}
+
+body.lang-en-active .lang-en {
+    display: block;
+}
