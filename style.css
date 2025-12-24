@@ -1,0 +1,40 @@
+body {
+font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+line-height: 1.6;
+max-width: 900px;
+margin: auto;
+padding: 40px;
+color: #111;
+background-color: #fff;
+}
+
+header {
+margin-bottom: 60px;
+}
+
+h1 {
+margin-bottom: 0;
+}
+
+h2 {
+margin-top: 60px;
+}
+
+article {
+margin-top: 30px;
+padding: 20px;
+border: 1px solid #ddd;
+}
+
+ul {
+padding-left: 20px;
+}
+
+a {
+color: #0055cc;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
