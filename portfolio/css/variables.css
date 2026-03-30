@@ -1,0 +1,79 @@
+/* ============================= */
+/* DESIGN SYSTEM VARIABLES */
+/* ============================= */
+
+/*
+Estas variables definen TODO el sistema visual.
+Si querés cambiar la paleta del sitio, lo haces acá.
+*/
+
+:root{
+
+/* Colores principales del sitio */
+--color-primary:#2563eb;
+--color-primary-hover:#1d4ed8;
+--color-secondary:#8b5cf6;
+--color-secondary-hover:#7c3aed;
+
+/* Colores de fondo */
+--color-bg:#ffffff;
+--color-surface:#f3f4f6;
+
+/* Colores de texto */
+--color-text:#1a1a1a;
+--color-text-light:#6b7280;
+
+/* Bordes */
+--color-border:#e5e7eb;
+
+/* Tamaños */
+--max-width:1100px;
+
+/* Espaciado consistente */
+--space-xs:4px;
+--space-sm:8px;
+--space-md:16px;
+--space-lg:32px;
+--space-xl:64px;
+
+/* Radios */
+--radius-sm:6px;
+--radius-md:10px;
+--radius-lg:50px;
+
+/* Tipografía */
+--font-family-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+--font-family-mono: 'Courier New', monospace;
+
+--font-size-xs: 12px;
+--font-size-sm: 14px;
+--font-size-base: 16px;
+--font-size-lg: 18px;
+--font-size-xl: 24px;
+--font-size-2xl: 32px;
+--font-size-3xl: 40px;
+
+--font-weight-normal: 400;
+--font-weight-medium: 500;
+--font-weight-bold: 700;
+
+/* Transiciones */
+--transition-fast: 150ms ease-in-out;
+--transition-normal: 250ms ease-in-out;
+--transition-slow: 350ms ease-in-out;
+
+}
+
+/* ============================= */
+/* DARK MODE VARIABLES */
+/* ============================= */
+
+[data-theme="dark"] {
+
+--color-bg:#070b14;
+--color-surface:#160a0a;
+--color-text:#ffffff;
+--color-text-light:#9ca3af;
+--color-border:#334155;
+
+}

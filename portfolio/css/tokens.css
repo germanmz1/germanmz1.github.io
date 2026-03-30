@@ -1,0 +1,64 @@
+/* ============================= */
+/* DESIGN TOKENS */
+/* ============================= */
+/*
+Sistema de colores centralized con CSS custom properties.
+Estructura: :root (light mode) + [data-theme="dark"] (dark mode)
+Todos los componentes deben referenciar estas variables, NUNCA hex directo.
+Cuando decidas la paleta final, actualizá solo este archivo.
+*/
+
+:root {
+  /* ========== LIGHT MODE ========== */
+
+  /* Background */
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f0f0f0;
+  --color-surface: #ffffff;
+
+  /* Text */
+  --color-text: #1a1a1a;
+  --color-text-muted: #666666;
+
+  /* Accent & Brand */
+  --color-accent: #0077ff;
+  --color-accent-soft: #e8f0ff;
+
+  /* Border */
+  --color-border: #dddddd;
+}
+
+[data-theme="dark"] {
+  /* ========== DARK MODE ========== */
+
+  /* Background */
+  --color-bg: #0a0a0f;
+  --color-bg-secondary: #111118;
+  --color-surface: #1a1a24;
+
+  /* Text */
+  --color-text: #f0f0f0;
+  --color-text-muted: #888888;
+
+  /* Accent & Brand */
+  --color-accent: #00d9ff;
+  --color-accent-soft: #0a1a2a;
+
+  /* Border */
+  --color-border: #2a2a3a;
+}
+
+/* ============================= */
+/* Semantic color aliases (optional for clarity) */
+/* ============================= */
+:root {
+  --color-primary: var(--color-accent);
+  --color-primary-hover: var(--color-accent);
+  --color-secondary: #7c3aed;
+  --color-secondary-hover: #6c2ed4;
+}
+
+[data-theme="dark"] {
+  --color-secondary: #a78bfa;
+  --color-secondary-hover: #c4b5fd;
+}

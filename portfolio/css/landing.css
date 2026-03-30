@@ -1,0 +1,235 @@
+/* ============================= */
+/* LANDING PAGE HERO SECTION */
+/* ============================= */
+
+.hero-landing {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    var(--color-bg) 0%,
+    var(--color-bg-secondary) 100%
+  );
+  overflow: hidden;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-top: -40px;
+  padding-top: 40px;
+}
+
+/* ============================= */
+/* PARTICLES CANVAS */
+/* ============================= */
+
+.particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0.6;
+}
+
+/* ============================= */
+/* HERO CONTENT */
+/* ============================= */
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ============================= */
+/* HERO TITLE */
+/* ============================= */
+
+.hero-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+  min-height: 50px;
+  letter-spacing: -0.01em;
+}
+
+/* Para el cursor del typewriter */
+.hero-title .typewriter-cursor {
+  color: var(--color-accent);
+}
+
+/* ============================= */
+/* HERO SUBTITLE */
+/* ============================= */
+
+.hero-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  margin: 0 0 50px 0;
+  font-weight: var(--font-weight-normal);
+  line-height: 1.5;
+}
+
+/* ============================= */
+/* BLOB CTA BUTTON */
+/* ============================= */
+
+.blob-cta-button {
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: transform var(--transition-normal);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  padding: 0;
+  outline: none;
+}
+
+.blob-cta-button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 8px;
+}
+
+.blob-cta-button svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: var(--color-accent);
+}
+
+.blob-cta-button svg path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.blob-cta-button span {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.blob-cta-button:hover {
+  transform: scale(1.05);
+}
+
+.blob-cta-button:active {
+  transform: scale(0.98);
+}
+
+/* ============================= */
+/* LANDING STATES & ANIMATIONS */
+/* ============================= */
+
+.lock-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.header-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+}
+
+.header-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-out-up {
+  animation: fadeOutUp 0.6s ease forwards;
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .hero-landing {
+    height: auto;
+    min-height: 80vh;
+    padding: 100px 20px 60px 20px;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .hero-title {
+    font-size: clamp(24px, 6vw, 40px);
+    margin-bottom: 15px;
+    min-height: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-base);
+    margin-bottom: 40px;
+  }
+
+  .blob-cta-button {
+    width: 160px;
+    height: 160px;
+  }
+
+  .blob-cta-button span {
+    font-size: var(--font-size-xs);
+  }
+
+  /* Particles: menor densidad en mobile */
+  .particles-canvas {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-landing {
+    min-height: 70vh;
+    padding: 80px 15px 40px 15px;
+  }
+
+  .hero-title {
+    font-size: clamp(20px, 5vw, 36px);
+  }
+
+  .blob-cta-button {
+    width: 140px;
+    height: 140px;
+  }
+}

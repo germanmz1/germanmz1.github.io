@@ -1,0 +1,7 @@
+/* Importa todo el sistema */
+
+@import "tokens.css";
+@import "variables.css";
+@import "base.css";
+@import "layout.css";
+@import "components.css";

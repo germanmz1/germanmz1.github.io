@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/portfolio/">
+    <title>German Martinez | Portfolio</title>
+    <meta name="description" content="Portfolio profesional de German Martinez: Data Science, Machine Learning, Software Development, Economics Analysis.">
+    <link rel="canonical" href="https://germanmz1.github.io/portfolio/">
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Landing page hero styles -->
+    <link rel="stylesheet" href="css/landing.css">
+    <!-- Devicons -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    
+    <!-- Evitar Flash de Light Theme antes de cargar el CSS -->
+    <script>
+      (function() {
+        const theme = localStorage.getItem('portfolio-theme') || 
+                      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      })();
+    </script>
+</head>
+<body class="lock-scroll">
+
+    <header class="header-hidden">
+        <div class="container">
+            <h1>German Martinez</h1>
+            <nav id="main-nav" class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/data-projects.html">Data</a></li>
+                    <li><a href="pages/software-projects.html">Software</a></li>
+                    <li><a href="pages/economics-projects.html">Economics</a></li>
+                </ul>
+            </nav>
+            <div class="header-controls">
+                <button 
+                    id="lang-toggle" 
+                    class="lang-toggle" 
+                    aria-label="Change language"
+                    type="button">
+                    ES
+                </button>
+                <button 
+                    id="theme-toggle" 
+                    class="theme-toggle" 
+                    aria-label="Toggle dark/light mode"
+                    aria-pressed="false"
+                    type="button">
+                    🌙
+                </button>
+                <button 
+                    id="hamburger-menu"
+                    class="hamburger-menu"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    type="button"
+                    aria-controls="nav-drawer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="nav-overlay" class="nav-overlay"></div>
+    <nav id="nav-drawer" class="nav-drawer">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/data-projects.html">Data</a></li>
+            <li><a href="pages/software-projects.html">Software</a></li>
+            <li><a href="pages/economics-projects.html">Economics</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- Hero Landing Section -->
+        <section class="hero-landing">
+            <!-- Particles Background Canvas -->
+            <canvas id="particles-canvas" class="particles-canvas"></canvas>
+
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <h2 id="hero-title" class="hero-title"></h2>
+                <p class="hero-subtitle">Full-stack Data Scientist | Developer | Economist</p>
+
+                <!-- CTA Button with Blob Effect -->
+                <button id="blob-cta-button" class="blob-cta-button">
+                    <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M150,50 Q250,0 350,50 Q400,150 350,250 Q250,300 150,250 Q100,150 150,50 Z" 
+                              fill="currentColor" 
+                              stroke="var(--color-accent)" 
+                              stroke-width="2"/>
+                    </svg>
+                    <span>Explore Projects</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Grilla de áreas usando clases CSS -->
+        <section class="areas-grid" id="areas-grid">
+            <!-- Contenedor será poblado dinámicamente con conteo de proyectos -->
+            <article class="area-card">
+                <h3>Data Science & Analysis</h3>
+                <p>Data Science, Machine Learning y Análisis de Datos.</p>
+                <p class="project-count" id="data-count" style="font-size: 0.9em; color: var(--color-text-light); margin-top: 10px;"></p>
+                <a href="pages/data-projects.html" class="primary-button">Ver proyectos</a>
+            </article>
+
+            <article class="area-card">
+                <h3>Software Development</h3>
+                <p>Desarrollo web y proyectos de programación general.</p>
+                <p class="project-count" id="software-count" style="font-size: 0.9em; color: var(--color-text-light); margin-top: 10px;"></p>
+                <a href="pages/software-projects.html" class="primary-button">Ver proyectos</a>
+            </article>
+
+            <article class="area-card">
+                <h3>Economics</h3>
+                <p>Análisis financiero y proyectos de economía.</p>
+                <p class="project-count" id="economics-count" style="font-size: 0.9em; color: var(--color-text-light); margin-top: 10px;"></p>
+                <a href="pages/economics-projects.html" class="primary-button">Ver proyectos</a>
+            </article>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section" id="skills-section">
+            <h2>Habilidades & Tecnologías</h2>
+            <div id="skills-container">
+                <!-- Skills serán renderizados dinámicamente aquí -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 German Martinez. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- =============== EXTERNAL LIBRARIES =============== -->
+    <!-- GSAP for blob animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- =============== MODULES =============== -->
+    <!-- 1. Data Layer -->
+    <script src="js/data/projects.js"></script>
+    <script src="js/data/skills.js"></script>
+    
+    <!-- 2. Core Features -->
+    <script src="js/theme.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/componentLoader.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    
+    <!-- 3. Landing Effects (Phase B) -->
+    <script src="js/effects/typewriter.js"></script>
+    <script src="js/effects/particles.js"></script>
+    <script src="js/effects/blob.js"></script>
+    <script src="js/effects/navBlob.js"></script>
+    
+    <!-- 4. Renderer para proyectos y skills -->
+    <script src="js/projectRenderer.js"></script>
+    <script src="js/skillsRenderer.js"></script>
+    
+    <!-- 5. Main App Orchestrator -->
+    <script src="js/main.js"></script>
+
+    <!-- 6. Landing Page Initialization -->
+    <script>
+      // Inicializar typewriter effect cuando la página esté lista
+      document.addEventListener('DOMContentLoaded', () => {
+        const titleElement = document.getElementById('hero-title');
+        const titleText = 'Bienvenido a mi Portfolio';
+        
+        // Crear efecto typewriter
+        const typewriter = new TypewriterEffect('hero-title', titleText, {
+          speed: 60,
+          delay: 200,
+          showCursor: true,
+          onComplete: () => {
+            console.log('✓ Typewriter complete');
+          }
+        });
+      });
+
+      // Actualizar conteo de proyectos en la página principal
+      function updateProjectCounts() {
+        const dataScienceCount = ProjectsData.getByCategory('datascience').length;
+        const softwareCount = ProjectsData.getByCategory('software').length;
+        const economicsCount = ProjectsData.getByCategory('economics').length;
+
+        const dataNode = document.getElementById('data-count');
+        const softwareNode = document.getElementById('software-count');
+        const economicsNode = document.getElementById('economics-count');
+
+        if (dataNode) dataNode.textContent = `${dataScienceCount} proyectos`;
+        if (softwareNode) softwareNode.textContent = `${softwareCount} proyectos`;
+        if (economicsNode) economicsNode.textContent = `${economicsCount} proyectos`;
+      }
+
+      // Inicializar skills cuando i18n esté listo
+      function initializeSkills() {
+        const lang = typeof i18n !== 'undefined' ? i18n.getCurrentLang() : 'es';
+        SkillsRenderer.renderAllSkills('#skills-container', lang);
+        SkillsRenderer.initLanguageListeners('#skills-container');
+      }
+
+      // Actualizar cuando i18n esté listo
+      document.addEventListener('i18n:ready', () => {
+        updateProjectCounts();
+        initializeSkills();
+      });
+
+      // Escuchar cambios de idioma
+      document.addEventListener('lang:changed', updateProjectCounts);
+
+      // Desbloquear Scroll al interactuar con Landing y destruir Landing del DOM
+      document.getElementById('blob-cta-button').addEventListener('click', () => {
+        const hero = document.querySelector('.hero-landing');
+        const header = document.querySelector('header');
+        
+        document.body.classList.remove('lock-scroll');
+        hero.classList.add('fade-out-up');
+        
+        if (header.classList.contains('header-hidden')) {
+          header.classList.replace('header-hidden', 'header-visible');
+        }
+
+        setTimeout(() => {
+          hero.remove();
+          // Tras quitar la landing, scrollear a grid
+          document.querySelector('#areas-grid').scrollIntoView({ behavior: 'smooth' });
+        }, 500);
+      });
+    </script>
+</body>
+</html>

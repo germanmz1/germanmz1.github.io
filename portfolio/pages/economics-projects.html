@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/portfolio/">
+    <title>Economics Projects | Portfolio</title>
+    <meta name="description" content="Proyectos de Análisis Económico y Finanzas">
+    <link rel="canonical" href="https://germanmz1.github.io/portfolio/pages/economics-projects.html">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>German Martinez</h1>
+            <nav id="main-nav" class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/data-projects.html">Data</a></li>
+                    <li><a href="pages/software-projects.html">Software</a></li>
+                    <li><a href="pages/economics-projects.html">Economics</a></li>
+                </ul>
+            </nav>
+            <div class="header-controls">
+                <button 
+                    id="lang-toggle" 
+                    class="lang-toggle" 
+                    aria-label="Change language"
+                    type="button">
+                    ES
+                </button>
+                <button 
+                    id="theme-toggle" 
+                    class="theme-toggle" 
+                    aria-label="Toggle dark/light mode"
+                    aria-pressed="false"
+                    type="button">
+                    🌙
+                </button>
+                <button 
+                    id="hamburger-menu"
+                    class="hamburger-menu"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    type="button"
+                    aria-controls="nav-drawer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="nav-overlay" class="nav-overlay"></div>
+    <nav id="nav-drawer" class="nav-drawer">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/data-projects.html">Data</a></li>
+            <li><a href="pages/software-projects.html">Software</a></li>
+            <li><a href="pages/economics-projects.html">Economics</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="project-hero">
+            <h2>Economics Projects</h2>
+            <p>Explora mis análisis económicos y proyectos de finanzas.</p>
+        </section>
+
+        <!-- Project Filters -->
+        <div class="project-filters" id="economics-projects-filters">
+            <!-- Botones de filtro serán generados dinámicamente -->
+        </div>
+
+        <!-- Projects Container -->
+        <section class="areas-grid" id="projects-container" data-project-category="economics">
+            <!-- Proyectos serán renderizados dinámicamente aquí -->
+            <div style="grid-column: 1/-1; text-align: center; padding: 40px;">
+                <p>Cargando proyectos...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 German Martinez. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Módulos JS en orden de dependencias -->
+    <!-- 1. Data Layer -->
+    <script src="js/data/projects.js"></script>
+    
+    <!-- 2. Core Features -->
+    <script src="js/theme.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/componentLoader.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    
+    <!-- 3. Visual Effects (Phase C nav) -->
+    <script src="js/effects/navBlob.js"></script>
+    
+    <!-- 4. Renderer para proyectos -->
+    <script src="js/projectRenderer.js"></script>
+    
+    <!-- 5. Project Filtering (Phase D) -->
+    <script src="js/projectFilter.js"></script>
+    
+    <!-- 6. Main App Orchestrator -->
+    <script src="js/main.js"></script>
+
+    <!-- 7. Código específico de página -->
+    <script>
+      // Inicializar filtros cuando i18n esté listo
+      document.addEventListener('i18n:ready', () => {
+        ProjectFilter.init('economics', 'economics-projects-filters', 'projects-container');
+        
+        // Renderizar proyectos iniciales
+        const lang = i18n.getCurrentLang();
+        ProjectRenderer.renderCategory('economics', '#projects-container', lang);
+      });
+
+      // Re-renderizar cuando cambia el idioma
+      document.addEventListener('lang:changed', (e) => {
+        ProjectFilter.handleLanguageChange(e.detail.lang, 'projects-container');
+      });
+    </script>
+</body>
+
+</html>

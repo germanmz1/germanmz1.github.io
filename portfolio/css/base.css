@@ -1,0 +1,135 @@
+/* ============================= */
+/* RESET */
+/* ============================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* ============================= */
+/* BODY */
+/* ============================= */
+
+body{
+
+font-family: var(--font-family-sans);
+font-size: var(--font-size-base);
+font-weight: var(--font-weight-normal);
+
+background: var(--color-bg);
+color: var(--color-text);
+
+line-height: 1.6;
+letter-spacing: -0.3px;
+
+transition: background-color var(--transition-normal), color var(--transition-normal);
+
+}
+
+/* ============================= */
+/* TYPOGRAPHY */
+/* ============================= */
+
+h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+  margin-bottom: var(--space-md);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+  margin-bottom: var(--space-sm);
+}
+
+h4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-sm);
+}
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+small {
+  font-size: var(--font-size-sm);
+}
+
+code {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  background: var(--color-surface);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+/* ============================= */
+/* LINKS */
+/* ============================= */
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ============================= */
+/* ACCESSIBILITY */
+/* ============================= */
+
+/* Keyboard focus visible para navegación */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+button:focus-visible {
+  outline-offset: 4px;
+}
+
+/* Respeta preferencia de usuario para reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Respeta preferencia de tema del sistema */
+@media (prefers-color-scheme: dark) {
+  :root:not(.forced-light) {
+    --color-bg: #070b14;
+    --color-surface: #160a0a;
+    --color-text: #ffffff;
+    --color-text-light: #9ca3af;
+    --color-border: #334155;
+  }
+}

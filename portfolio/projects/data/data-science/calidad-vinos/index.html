@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wine Quality Prediction | Portfolio</title>
+
+<link rel="stylesheet" href="../../../../css/main.css">
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<main class="container">
+
+<!-- HERO -->
+
+<section class="project-hero">
+
+<h1>Wine Quality Prediction</h1>
+
+<p>
+Proyecto de Machine Learning para predecir la calidad
+de vinos usando Random Forest y análisis exploratorio
+de datos.
+</p>
+
+<div class="project-tags">
+
+<span class="tag">Python</span>
+<span class="tag">Machine Learning</span>
+<span class="tag">EDA</span>
+<span class="tag">Random Forest</span>
+
+</div>
+
+</section>
+
+
+<!-- PROJECT OVERVIEW -->
+
+<section>
+
+<h2>Overview</h2>
+
+<p>
+El objetivo de este proyecto es predecir la calidad
+de vinos tintos utilizando variables químicas del
+dataset Wine Quality.
+</p>
+
+<p>
+Se realizó un análisis exploratorio de datos,
+ingeniería de variables y entrenamiento de
+modelos de machine learning.
+</p>
+
+</section>
+
+
+<!-- DATASET -->
+
+<section>
+
+<h2>Dataset</h2>
+
+<p>
+El dataset contiene información química sobre
+vinos tintos, incluyendo:
+</p>
+
+<ul>
+
+<li>Acidez fija</li>
+<li>Acidez volátil</li>
+<li>Ácido cítrico</li>
+<li>Azúcar residual</li>
+<li>Alcohol</li>
+
+</ul>
+
+<img src="assets/images/dataset.png" alt="Dataset overview">
+
+</section>
+
+
+<!-- EDA -->
+
+<section>
+
+<h2>Exploratory Data Analysis</h2>
+
+<p>
+Se analizaron distribuciones, correlaciones
+y relaciones entre variables.
+</p>
+
+<img src="assets/images/correlation.png">
+
+<img src="assets/images/eda.png">
+
+</section>
+
+
+<!-- MODEL -->
+
+<section>
+
+<h2>Machine Learning Model</h2>
+
+<p>
+Se entrenó un modelo Random Forest optimizado
+mediante GridSearch.
+</p>
+
+<div class="metrics-box">
+
+<p>Accuracy: 0.79</p>
+<p>ROC AUC: 0.79</p>
+
+</div>
+
+<img src="assets/images/confusion_matrix.png">
+
+</section>
+
+
+<!-- NOTEBOOK -->
+
+<section>
+
+<h2>Notebook</h2>
+
+<p>
+El notebook completo del proyecto puede consultarse
+a continuación.
+</p>
+
+<a class="primary-button"
+href="notebooks/wine_quality_model.ipynb">
+
+Ver Notebook
+
+</a>
+
+</section>
+
+
+<!-- CONCLUSION -->
+
+<section>
+
+<h2>Conclusion</h2>
+
+<p>
+El modelo logró un accuracy cercano al 80%.
+Se observó que variables como alcohol
+y acidez volátil tienen fuerte influencia
+en la calidad del vino.
+</p>
+
+</section>
+
+</main>
+
+<div id="footer"></div>
+
+<script src="../../../../js/components.js"></script>
+
+</body>
+
+</html>
