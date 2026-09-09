@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/portfolio/">
-    <title>Software Projects | Portfolio</title>
-    <meta name="description" content="Proyectos de Desarrollo de Software y Aplicaciones Web">
-    <link rel="canonical" href="https://germanmz1.github.io/portfolio/pages/software-projects.html">
+    <title>Economics Projects | Portfolio</title>
+    <meta name="description" content="Proyectos de Análisis Económico y Finanzas">
+    <link rel="canonical" href="https://germanmz1.github.io/portfolio/pages/economics-projects.html">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -66,17 +65,17 @@
 
     <main class="container">
         <section class="project-hero">
-            <h2>Software Projects</h2>
-            <p>Explora mis proyectos de desarrollo web y aplicaciones.</p>
+            <h2>Economics Projects</h2>
+            <p>Explora mis análisis económicos y proyectos de finanzas.</p>
         </section>
 
         <!-- Project Filters -->
-        <div class="project-filters" id="software-projects-filters">
+        <div class="project-filters" id="economics-projects-filters">
             <!-- Botones de filtro serán generados dinámicamente -->
         </div>
 
         <!-- Projects Container -->
-        <section class="areas-grid" id="projects-container" data-project-category="software">
+        <section class="areas-grid" id="projects-container" data-project-category="economics">
             <!-- Proyectos serán renderizados dinámicamente aquí -->
             <div style="grid-column: 1/-1; text-align: center; padding: 40px;">
                 <p>Cargando proyectos...</p>
@@ -114,11 +113,11 @@
     <script>
       // Inicializar filtros cuando i18n esté listo
       document.addEventListener('i18n:ready', () => {
-        ProjectFilter.init('software', 'software-projects-filters', 'projects-container');
+        ProjectFilter.init('economics', 'economics-projects-filters', 'projects-container');
         
         // Renderizar proyectos iniciales
         const lang = i18n.getCurrentLang();
-        ProjectRenderer.renderCategory('software', '#projects-container', lang);
+        ProjectRenderer.renderCategory('economics', '#projects-container', lang);
       });
 
       // Re-renderizar cuando cambia el idioma
