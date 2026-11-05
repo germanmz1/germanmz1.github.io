@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "slug": "portfolio-nextjs",
+    "titulo": "Portfolio Profesional",
+    "categoria": "Desarrollo de Software",
+    "descripcion": "Portfolio personal creado desde cero con Next.js, App Router y Tailwind CSS. Incluye panel de gestión local.",
+    "tecnologias": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "React"
+    ],
+    "repoUrl": "https://github.com/germanmz1/germanmz1.github.io",
+    "demoUrl": "https://germanmz1.github.io",
+    "imagen": "/placeholder.jpg",
+    "objetivo": "Crear una presencia online profesional, estática y fácilmente administrable.",
+    "metodologia": "Se utilizó Server Components y exportación estática para máximo rendimiento."
+  }
+]

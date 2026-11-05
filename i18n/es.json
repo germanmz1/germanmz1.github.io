@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "howItWasBuilt": "Cómo se construyó"
+  },
+  "hero": {
+    "title": "Desarrollador Fullstack",
+    "subtitle": "Combinando desarrollo de software, análisis de datos y visión de negocio.",
+    "cta": "Ver Proyectos"
+  },
+  "common": {
+    "toggleTheme": "Cambiar tema",
+    "toggleLang": "Change to English"
+  }
+}
